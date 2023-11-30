@@ -41,13 +41,13 @@ def add_new_2(mat):
 	# while loop will break as the
 	# random cell chosen will be empty
 	# (or contains zero)
-	while(mat[r] != 0):
+	while(r != 0):
 		r = random.randint(0, 3)
 		c = random.randint(0, 3)
 
 	# we will place a 2 at that empty
 	# random cell.
-	mat[r] = 2
+	mat[r][c] = 2
 
 # function to get the current
 # state of game

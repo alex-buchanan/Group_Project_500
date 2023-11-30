@@ -16,7 +16,8 @@ while(True):
 
 	# taking the user input
 	# for next step
-	x = input("Press the command : ")
+	print("Press the command :")
+	x = input()
 
 	# we have to move up
 	if(x == 'W' or x == 'w'):
