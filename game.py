@@ -1,8 +1,4 @@
-# 2048.py
 
-# importing the logic.py file
-# where we have written all the
-# logic functions used.
 import logic
 
 # Driver code
