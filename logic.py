@@ -29,21 +29,24 @@ def start_game():
 # the UI
 def draw_grid(mat):
 	os.system('cls')
-	print('+----+----+----+----+')
+	print('+------+------+------+------+')
 	for i in mat:
 		s = '|{0:^6d}|{1:^6d}|{2:^6d}|{3:^6d}|'
 		print(s.format(*i))
-	print('+----+----+----+----+')
+	print('+------+------+------+------+')
+	print("'P' or 'p' : Show Commands")
+	print("'X' or 'x' : Exit Game")
+	return
 
+def show_commands():
 	# printing controls for user
 	print("Commands are as follows : ")
 	print("'W' or 'w' : Move Up")
 	print("'S' or 's' : Move Down")
 	print("'A' or 'a' : Move Left")
 	print("'D' or 'd' : Move Right")
+	print("'X' or 'x' : Exit Game")
 	return
-
-
 
 # function to add a new 2 in
 # grid at any random empty cell
