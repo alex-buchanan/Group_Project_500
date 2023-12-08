@@ -5,6 +5,7 @@
 # for methods to generate random
 # numbers.
 import random
+import os
 
 # function to initialize game / grid
 # at the start
@@ -17,17 +18,32 @@ def start_game():
 	for i in range(4):
 		mat.append([0] * 4)
 
+	draw_grid(mat)
+
+	# calling the function to add
+	# a new 2 in grid after every step
+	add_new_2(mat)
+	return mat
+
+# adding a drawing function to improve 
+# the UI
+def draw_grid(mat):
+	os.system('cls')
+	print('+----+----+----+----+')
+	for i in mat:
+		s = '|{0:^6d}|{1:^6d}|{2:^6d}|{3:^6d}|'
+		print(s.format(*i))
+	print('+----+----+----+----+')
+
 	# printing controls for user
 	print("Commands are as follows : ")
 	print("'W' or 'w' : Move Up")
 	print("'S' or 's' : Move Down")
 	print("'A' or 'a' : Move Left")
 	print("'D' or 'd' : Move Right")
+	return
 
-	# calling the function to add
-	# a new 2 in grid after every step
-	add_new_2(mat)
-	return mat
+
 
 # function to add a new 2 in
 # grid at any random empty cell

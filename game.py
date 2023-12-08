@@ -72,4 +72,4 @@ while(True):
 
 	# print the matrix after each
 	# move.
-	print(mat)
+	logic.draw_grid(mat)
