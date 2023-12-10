@@ -1,0 +1,6 @@
+ChangeLog
+*.pyc
+__pycache__/
+etc/tempest.conf
+etc/tempest.conf.sample
+etc/logging.conf
