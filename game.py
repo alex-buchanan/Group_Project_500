@@ -1,6 +1,10 @@
 
 import logic
 
+# global running variable
+RUN = True
+P_CMD = False
+
 # Driver code
 if __name__ == '__main__':
 	
@@ -8,12 +12,12 @@ if __name__ == '__main__':
 # to initialize the matrix
 	mat = logic.start_game()
 
-while(True):
+while(RUN):
 
 	# taking the user input
 	# for next step
-	print("Press the command :")
-	x = input()
+	P_CMD = False
+	x = input(":")
 
 	# we have to move up
 	if(x == 'W' or x == 'w'):
@@ -67,9 +71,21 @@ while(True):
 			logic.add_new_2(mat)
 		else:
 			break
+
+	# Show Commands
+	elif(x == 'P' or x == 'p'):
+		logic.show_commands()
+		P_CMD = True
+
+	# exit game
+	elif(x == 'X' or x == 'x'):
+		print("Exiting Game")
+		RUN = False
+
 	else:
 		print("Invalid Key Pressed")
 
 	# print the matrix after each
 	# move.
-	logic.draw_grid(mat)
+	if not P_CMD:
+		logic.draw_grid(mat)
